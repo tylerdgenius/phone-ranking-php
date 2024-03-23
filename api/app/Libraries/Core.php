@@ -1,7 +1,5 @@
 <?php
 
-use http\Message\Body;
-
 /* App Core Controller
  * Creates URL & Loads Core Controller
  * URL Format /controller/method/params
@@ -25,13 +23,11 @@ class Core{
         return $_SERVER['REQUEST_METHOD'];
     }
     
-    public function getUrl(){
+    public function getUrl(){        
         if(isset($_GET['url'])){
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             return $url;
         }
     }
-    
-    
 }
