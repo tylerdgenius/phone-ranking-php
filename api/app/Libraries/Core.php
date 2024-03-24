@@ -1,6 +1,6 @@
 <?php
 
-/* App Core Controller
+/* Api Core Controller
  * Creates URL & Loads Core Controller
  * URL Format /controller/method/params
  */
