@@ -2,7 +2,7 @@
 
 require_once CLIENT_CONTROLLERS . "Page.php";
 
-class ClientRouter {
+class Router {
     private $routes = [];
     
     public function __construct(){
@@ -23,9 +23,21 @@ class ClientRouter {
     
     public function renderContent($url, $params){
         try {
+
             if($url == null || $url == "home") {
               $route = $this->routes['home'];
               return $route($params);
+            }
+
+            foreach ($this->routes as $routePattern => $handler) {
+                if (preg_match("~^$routePattern$~", $url, $matches)) {
+                    if (isset($matches[1])) {
+                        $params['id'] = $matches[1];
+                        return $handler($params);
+                    } else {
+                        return $handler($params);
+                    }
+                }
             }
             
             if(!isset($this->routes[$url])){
@@ -33,6 +45,7 @@ class ClientRouter {
                 return $route($params);
             }
         } catch (Exception $e) {
+            echo "SErver error";
             $route = $this->routes['serverError'];
             return $route($params);
         }

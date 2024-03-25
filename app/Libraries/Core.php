@@ -4,13 +4,13 @@
  * Creates URL & Loads Core Controller
  */
 
-class ClientCoreLoader {
+class Core {
     private $url;
     private $params = [];
     
     public function __construct(){
         $this->getData();
-        $router = new ClientRouter();
+        $router = new Router();
         $router->renderContent($this->url, $this->params);
     }
     

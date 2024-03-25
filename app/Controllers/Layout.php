@@ -1,8 +1,10 @@
 <?php 
 
 class Layout {
-    public static function renderDefaultLayout($title) {
+    public static function renderDefaultLayout($title, $data = []) {
         $capitalizedTitle = ucwords(strtolower($title));
+        
+        $urlData = $data;
         
         ob_start();
         include CLIENT_PAGES . $title . '.php';

@@ -1,6 +1,6 @@
 <?php
 
-class Page extends ClientController {
+class Page extends Controller {
     
     /**
      * {@inheritDoc}
@@ -11,6 +11,8 @@ class Page extends ClientController {
         // TODO Auto-generated method stub
         return [
             'home' => [$this, 'index'], 
+            'devices' => [$this, 'devices'],
+            'devices/(\d+)' => [$this, 'singleDevice'],
             'notFound' => [$this, 'notFound'], 
             'serverError' => [$this, 'serverError']
         ];
@@ -18,6 +20,14 @@ class Page extends ClientController {
     
     public function index($params) {
        $this->view("Home", "Default");
+    }
+    
+    public function singleDevice($params) {
+        $this->view("SingleDevice", "Default", $params);
+    }
+    
+    public function devices($params) {
+        $this->view("Devices", "Default");
     }
     
     public function notFound($params) {

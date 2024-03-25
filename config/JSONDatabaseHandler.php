@@ -31,6 +31,24 @@ class JSONDatabaseHandler {
         return isset($data[$collection]) ? $data[$collection] : [];
     }
     
+    public function readValue($collection, $key) {
+        $data = $this->read();
+        return isset($data[$collection][$key]) ? $data[$collection][$key] : null;
+    }
+    
+    public function filterById($collection, $id) {
+        $data = $this->read();
+        $filteredData = [];
+        if(isset($data[$collection])) {
+            foreach($data[$collection] as $item) {
+                if(isset($item['id']) && $item['id'] == $id) {
+                    $filteredData[] = $item;
+                }
+            }
+        }
+        return $filteredData;
+    }
+    
     public function update($collection, $index, $record) {
         $data = $this->read();
         if (isset($data[$collection][$index])) {

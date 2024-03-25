@@ -1,8 +1,8 @@
 <?php
 
-require_once API_INTERFACES . 'ControllerBase.php';
+require_once INTERFACES . 'ControllerBase.php';
 
-class ClientController implements ControllerBase {
+class Controller implements ControllerBase {
     public function model($model) {
         require_once API_MODELS . $model . '.php';
         
@@ -16,13 +16,13 @@ class ClientController implements ControllerBase {
             }
             
             if(!$layoutType) {
-              return require_once CLIENT_PAGES . $view . '.php';
+                return require_once CLIENT_PAGES . $view . '.php';
             }
             
             require_once CLIENT_CONTROLLERS . 'Layout.php';
             
             if($layoutType == "Default") {
-                return Layout::renderDefaultLayout(strtoupper($view));
+                return Layout::renderDefaultLayout(strtoupper($view), $data);
             }
         } catch (Exception $e) {
             require_once CLIENT_PAGES . '503.php';
@@ -30,6 +30,6 @@ class ClientController implements ControllerBase {
     }
     
     public function getRoutes(): array
-    { 
+    {
     }
 }

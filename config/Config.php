@@ -14,13 +14,5 @@ define("CLIENT_VIEW_RESOURCES", dirname(dirname(__FILE__)) . "/app/Resources/");
 define("CLIENT_CONTROLLERS", dirname(dirname(__FILE__)) . "/app/Controllers/");
 define("CLIENT_LAYOUT", dirname(dirname(__FILE__)) . "/app/Layout/");
 define("PUBLIC_FOLDER", dirname(dirname(__FILE__)) . '/public/');
-
-// Api based constants
-define("API", dirname(dirname(__FILE__)) . "/api/app/");
-define("API_CONTROLLERS", dirname(dirname(__FILE__)) . "/api/app/Controllers/");
-define("API_HELPERS", dirname(dirname(__FILE__)) . "/api/app/Helpers/");
-define("API_INTERFACES", dirname(dirname(__FILE__)) . "/api/app/Interfaces/");
-define("API_MODELS", dirname(dirname(__FILE__)) . "/api/app/Models/");
-
-//Public files
-define("MAIN_PUBLIC", getcwd() . "/public/");
+define("INTERFACES", dirname(dirname(__FILE__)) . "/app/Interfaces/");
+define("MODELS", dirname(dirname(__FILE__)) . "/app/Models/");
