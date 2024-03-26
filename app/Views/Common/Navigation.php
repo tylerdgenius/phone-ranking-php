@@ -1,7 +1,7 @@
 <?php 
     $links = [
         "Home" => "home",
-        "Phones" =>  "devices",
+		"Ranking" => "ranking",
         "Operating Systems" => "operating-system"
     ];
     
@@ -9,7 +9,6 @@
         "Login" => "login",
         "Join the community" => "register"
     ];
-
 ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav-container">
         <div class="container-fluid justify-content-center">

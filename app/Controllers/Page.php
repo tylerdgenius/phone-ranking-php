@@ -12,6 +12,7 @@ class Page extends Controller {
         return [
             'home' => [$this, 'index'], 
             'devices' => [$this, 'devices'],
+            'ranking' => [$this, 'ranking'],
             'devices/(\d+)' => [$this, 'singleDevice'],
             'notFound' => [$this, 'notFound'], 
             'serverError' => [$this, 'serverError']
@@ -28,6 +29,10 @@ class Page extends Controller {
     
     public function devices($params) {
         $this->view("Devices", "Default");
+    }
+
+    public function ranking($params) {
+        $this->view("Ranking", "Default");
     }
     
     public function notFound($params) {
