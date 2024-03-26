@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once MODELS . 'DevicesModel.php';
 
 $devicesModel = new DevicesModel();
@@ -15,7 +17,7 @@ $phones = $devicesModel->getAllDevices();
         <p class="text-center">Trustworthy and in-depth reviews and recommendations for iOS devices</p>
     </div>
 </div>
-<div class='bg-primary d-flex flex-column justify-content-center align-items-center text-white p-5'>
+<div class='bg-danger d-flex flex-column justify-content-center align-items-center text-white p-5'>
     <p class="text-center">
     iOS Hub is your ultimate destination for all things iOS! Whether you're an avid iPhone user, iPad aficionado, or simply curious about the latest developments in the Apple ecosystem, you've come to the right place. You can explore our comprehensive collection of articles covering everything from the latest iOS releases and app recommendations to troubleshooting common issues and optimizing device performance.
     </p>
@@ -36,7 +38,7 @@ $phones = $devicesModel->getAllDevices();
                     <div>
                         <p class='text-center'>{$phone['name']}</p>
                         <p class='text-center'>$cutText...</p>
-                        <div class='d-flex justify-content-center'><a href='devices/{$phone['id']}'>Read more</a></div>
+                        <div class='d-flex justify-content-center'><a href='devices/{$phone['id']}' class='btn btn-danger '>Read more</a></div>
                     </div>             
                 </div>";
             } ?>

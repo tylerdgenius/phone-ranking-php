@@ -24,6 +24,7 @@ class JSONDatabaseHandler {
         }
         $data[$collection][] = $record;
         $this->write($data);
+        return $data;
     }
     
     public function readAll($collection) {

@@ -1,275 +1,279 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"username": "tylerdgenius",
-			"email": "albertnwachuwu@gmail.com"
-		}
-	],
-	"devices": [
-		{
-			"id": 1,
-			"name": "iPhone X",
-			"manufacturer": "Apple Inc.",
-			"osVersion": "11.1.1",
-			"osMaxVersioin": "16.7.5",
-			"description": "<p>The iPhone X, released by Apple in 2017, marked a significant shift in iPhone design with its edge-to-edge display and removal of the home button. Featuring a stunning OLED Super Retina display, Face ID facial recognition technology, and powerful A11 Bionic chip, the iPhone X offered cutting-edge performance and innovative features. Its dual-camera system provided impressive photography capabilities, while its sleek and premium design cemented its status as a flagship smartphone</p>",
-			"recommendationScore": 7.5,
-			"releaseDate": "2017-09-17T00:00:00",
-			"weightInGrams": 174,
-			"cpu": "Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral)",
-			"memoryVariations": "64GB 3GB RAM, 256GB 3GB RAM",
-			"backCameraSpecs": [
-				"7 MP, f/2.2, 32mm (standard)",
-				"Quad-LED dual-tone flash, HDR (photo/panorama), panorama, HDR",
-				"4K@24/30/60fps, 1080p@30/60/120/240fps"
-			],
-			"frontCameraSpecs": [
-				"12 MP, f/1.8, 28mm (wide), 1/3.0\", 1.22µm, dual pixel PDAF, OIS",
-				"12 MP, f/2.4, 52mm (telephoto), 1/3.4\", 1.0µm, PDAF, OIS, 2x optical zoom",
-				"HDR",
-				"1080p@30fps"
-			],
-			"gpu": "Apple GPU (three-core graphics)",
-			"chipset": "Apple A11 Bionic (10 nm)",
-			"talkTime": 21,
-			"batteryType": "Li-Ion 2716 mAh, non-removable (10.35 Wh)",
-			"dimensions": "143.6 x 70.9 x 7.7 mm (5.65 x 2.79 x 0.30 in)",
-			"images": [
-				"https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
-				"https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
-			],
-			"externalReviewUrls": [
-				{
-					"id": 1,
-					"name": "GSM Arena",
-					"link": "https://www.gsmarena.com/apple_iphone_x-8858.php"
-				},
-				{
-					"id": 2,
-					"name": "Apple",
-					"link": "https://support.apple.com/en-us/111864"
-				},
-				{
-					"id": 3,
-					"name": "Android Central",
-					"link": "https://www.androidcentral.com/iphone-x"
-				}
-			],
-			"retailers": [
-				{
-					"id": 1,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 2,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 3,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				}
-			]
-		},
-		{
-			"id": 2,
-			"name": "iPhone 13 Pro Max",
-			"manufacturer": "Apple Inc.",
-			"osVersion": "15",
-			"osMaxVersioin": "17.4",
-			"description": "<p>The iPhone 13 Pro Max features a 6.7-inch Super Retina XDR display, A15 Bionic chip, and Ceramic Shield front cover for durability. Its triple-camera system offers advanced photography capabilities, including improved low-light performance and Cinematic mode for videos. With 5G connectivity, longer battery life, and MagSafe compatibility, it delivers a premium smartphone experience.</p>",
-			"recommendationScore": 9,
-			"releaseDate": "2021-09-14T00:00:00",
-			"weightInGrams": 240,
-			"cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
-			"memoryVariations": "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM",
-			"backCameraSpecs": [
-				"12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS",
-				"12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.4\", 1.0µm, OIS, 3x optical zoom",
-				"12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.4\", 1.0µm, PDAF",
-				"TOF 3D LiDAR scanner (depth)"
-			],
-			"frontCameraSpecs": [
-				"12 MP, f/2.2, 23mm (wide), 1/3.6",
-				"SL 3D, (depth/biometrics sensor)"	
-			],
-			"gpu": "Apple GPU (5-core graphics)",
-			"chipset": "Apple A15 Bionic (4 nm)",
-			"talkTime": 0,
-			"batteryType": "Li-Ion 4352 mAh, non-removable (16.75 Wh)",
-			"dimensions": "160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in)",
-			"images": [
-				"https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
-				"https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
-			],
-			"externalReviewUrls": [
-				{
-					"id": 1,
-					"name": "GSM Arena",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				},
-				{
-					"id": 2,
-					"name": "Apple",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				},
-				{
-					"id": 3,
-					"name": "Android Central",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				}
-			],
-			"retailers": [
-				{
-					"id": 1,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 2,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 3,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				}
-			]
-		},
-		{
-			"id": 3,
-			"name": "iPhone 13 Pro Max",
-			"manufacturer": "Apple Inc.",
-			"osVersion": "15",
-			"osMaxVersioin": "17.4",
-			"description": "<p>The iPhone 13 Pro Max features a 6.7-inch Super Retina XDR display, A15 Bionic chip, and Ceramic Shield front cover for durability. Its triple-camera system offers advanced photography capabilities, including improved low-light performance and Cinematic mode for videos. With 5G connectivity, longer battery life, and MagSafe compatibility, it delivers a premium smartphone experience.</p>",
-			"recommendationScore": 9,
-			"releaseDate": "2021-09-14T00:00:00",
-			"weightInGrams": 240,
-			"cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
-			"memoryVariations": "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM",
-			"backCameraSpecs": [
-				"12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS",
-				"12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.4\", 1.0µm, OIS, 3x optical zoom",
-				"12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.4\", 1.0µm, PDAF",
-				"TOF 3D LiDAR scanner (depth)"
-			],
-			"frontCameraSpecs": [
-				"12 MP, f/2.2, 23mm (wide), 1/3.6",
-				"SL 3D, (depth/biometrics sensor)"	
-			],
-			"gpu": "Apple GPU (5-core graphics)",
-			"chipset": "Apple A15 Bionic (4 nm)",
-			"talkTime": 0,
-			"batteryType": "Li-Ion 4352 mAh, non-removable (16.75 Wh)",
-			"dimensions": "160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in)",
-			"images": [
-				"https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
-				"https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
-			],
-			"externalReviewUrls": [
-				{
-					"id": 1,
-					"name": "GSM Arena",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				},
-				{
-					"id": 2,
-					"name": "Apple",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				},
-				{
-					"id": 3,
-					"name": "Android Central",
-					"link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
-				}
-			],
-			"retailers": [
-				{
-					"id": 1,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 2,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				},
-				{
-					"id": 3,
-					"name": "Allo Allo",
-					"price": "",
-					"link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
-				}
-			]
-		}
-	],
-	"rankings": [
-		{
-			
-		}
-	],
-	"operatingSystems": [
-		{
-			"name": "iOS 17",
-			"description": "",
-			"features:": [
-				{
-					"name": "Live Voicemail",
-					"description": ""
-				},
-				{
-					"name": "Name Drop",
-					"description": ""
-				},
-				{
-					"name": "Standby Mode",
-					"description": "Turn your iPhone on its side while charging to make it even more useful when you set it down."
-				}
-				
-			]
-		},
-		{
-			"name": "iOS 17",
-			"description": "",
-			"features:": [
-				{
-					"name": "Live Voicemail",
-					"description": ""
-				}
-			]
-		}
-	],
-	"userReviews": [
-		{
-			"id": 1,
-			"userId": 2,
-			"rating": 4,
-			"review": "<p>This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option.</p>"
-		}
-	],
-	"userFavorites": [
-		{
-			"id": 1,
-			"userId": 2,
-			"deviceId": 1
-		},
-		{
-			"id": 1,
-			"userId": 2,
-			"deviceId": 2
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "username": "tylerdgenius",
+      "email": "albertnwachuwu@gmail.com",
+      "password": "Naruto60$"
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "name": "iPhone X",
+      "manufacturer": "Apple Inc.",
+      "osVersion": "11.1.1",
+      "osMaxVersioin": "16.7.5",
+      "description": "<p>The iPhone X, released by Apple in 2017, marked a significant shift in iPhone design with its edge-to-edge display and removal of the home button. Featuring a stunning OLED Super Retina display, Face ID facial recognition technology, and powerful A11 Bionic chip, the iPhone X offered cutting-edge performance and innovative features. Its dual-camera system provided impressive photography capabilities, while its sleek and premium design cemented its status as a flagship smartphone</p>",
+      "recommendationScore": 7.5,
+      "releaseDate": "2017-09-17T00:00:00",
+      "weightInGrams": 174,
+      "cpu": "Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral)",
+      "memoryVariations": "64GB 3GB RAM, 256GB 3GB RAM",
+      "backCameraSpecs": [
+        "7 MP, f/2.2, 32mm (standard)",
+        "Quad-LED dual-tone flash, HDR (photo/panorama), panorama, HDR",
+        "4K@24/30/60fps, 1080p@30/60/120/240fps"
+      ],
+      "frontCameraSpecs": [
+        "12 MP, f/1.8, 28mm (wide), 1/3.0\", 1.22µm, dual pixel PDAF, OIS",
+        "12 MP, f/2.4, 52mm (telephoto), 1/3.4\", 1.0µm, PDAF, OIS, 2x optical zoom",
+        "HDR",
+        "1080p@30fps"
+      ],
+      "gpu": "Apple GPU (three-core graphics)",
+      "chipset": "Apple A11 Bionic (10 nm)",
+      "talkTime": 21,
+      "batteryType": "Li-Ion 2716 mAh, non-removable (10.35 Wh)",
+      "dimensions": "143.6 x 70.9 x 7.7 mm (5.65 x 2.79 x 0.30 in)",
+      "images": [
+        "https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
+        "https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
+      ],
+      "externalReviewUrls": [
+        {
+          "id": 1,
+          "name": "GSM Arena",
+          "link": "https://www.gsmarena.com/apple_iphone_x-8858.php"
+        },
+        {
+          "id": 2,
+          "name": "Apple",
+          "link": "https://support.apple.com/en-us/111864"
+        },
+        {
+          "id": 3,
+          "name": "Android Central",
+          "link": "https://www.androidcentral.com/iphone-x"
+        }
+      ],
+      "retailers": [
+        {
+          "id": 1,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 2,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 3,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "iPhone 13 Pro Max",
+      "manufacturer": "Apple Inc.",
+      "osVersion": "15",
+      "osMaxVersioin": "17.4",
+      "description": "<p>The iPhone 13 Pro Max features a 6.7-inch Super Retina XDR display, A15 Bionic chip, and Ceramic Shield front cover for durability. Its triple-camera system offers advanced photography capabilities, including improved low-light performance and Cinematic mode for videos. With 5G connectivity, longer battery life, and MagSafe compatibility, it delivers a premium smartphone experience.</p>",
+      "recommendationScore": 9,
+      "releaseDate": "2021-09-14T00:00:00",
+      "weightInGrams": 240,
+      "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+      "memoryVariations": "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM",
+      "backCameraSpecs": [
+        "12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS",
+        "12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.4\", 1.0µm, OIS, 3x optical zoom",
+        "12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.4\", 1.0µm, PDAF",
+        "TOF 3D LiDAR scanner (depth)"
+      ],
+      "frontCameraSpecs": [
+        "12 MP, f/2.2, 23mm (wide), 1/3.6",
+        "SL 3D, (depth/biometrics sensor)"
+      ],
+      "gpu": "Apple GPU (5-core graphics)",
+      "chipset": "Apple A15 Bionic (4 nm)",
+      "talkTime": 0,
+      "batteryType": "Li-Ion 4352 mAh, non-removable (16.75 Wh)",
+      "dimensions": "160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in)",
+      "images": [
+        "https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
+        "https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
+      ],
+      "externalReviewUrls": [
+        {
+          "id": 1,
+          "name": "GSM Arena",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        },
+        {
+          "id": 2,
+          "name": "Apple",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        },
+        {
+          "id": 3,
+          "name": "Android Central",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        }
+      ],
+      "retailers": [
+        {
+          "id": 1,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 2,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 3,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "iPhone 13 Pro Max",
+      "manufacturer": "Apple Inc.",
+      "osVersion": "15",
+      "osMaxVersioin": "17.4",
+      "description": "<p>The iPhone 13 Pro Max features a 6.7-inch Super Retina XDR display, A15 Bionic chip, and Ceramic Shield front cover for durability. Its triple-camera system offers advanced photography capabilities, including improved low-light performance and Cinematic mode for videos. With 5G connectivity, longer battery life, and MagSafe compatibility, it delivers a premium smartphone experience.</p>",
+      "recommendationScore": 9,
+      "releaseDate": "2021-09-14T00:00:00",
+      "weightInGrams": 240,
+      "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+      "memoryVariations": "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM",
+      "backCameraSpecs": [
+        "12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS",
+        "12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.4\", 1.0µm, OIS, 3x optical zoom",
+        "12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.4\", 1.0µm, PDAF",
+        "TOF 3D LiDAR scanner (depth)"
+      ],
+      "frontCameraSpecs": [
+        "12 MP, f/2.2, 23mm (wide), 1/3.6",
+        "SL 3D, (depth/biometrics sensor)"
+      ],
+      "gpu": "Apple GPU (5-core graphics)",
+      "chipset": "Apple A15 Bionic (4 nm)",
+      "talkTime": 0,
+      "batteryType": "Li-Ion 4352 mAh, non-removable (16.75 Wh)",
+      "dimensions": "160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in)",
+      "images": [
+        "https://www.einfo.co.nz/media/catalog/product/cache/a38d1c83e0d63148b81a03ec284a15b5/i/2/i256s_4.jpg",
+        "https://www.apple.com/newsroom/images/product/iphone/standard/iPhone_X_family_line_up_big.jpg.large.jpg"
+      ],
+      "externalReviewUrls": [
+        {
+          "id": 1,
+          "name": "GSM Arena",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        },
+        {
+          "id": 2,
+          "name": "Apple",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        },
+        {
+          "id": 3,
+          "name": "Android Central",
+          "link": "https://https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php"
+        }
+      ],
+      "retailers": [
+        {
+          "id": 1,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 2,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        },
+        {
+          "id": 3,
+          "name": "Allo Allo",
+          "price": "",
+          "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
+        }
+      ]
+    }
+  ],
+  "rankings": [{}],
+  "operatingSystems": [
+    {
+      "name": "iOS 17",
+      "description": "",
+      "features:": [
+        {
+          "name": "Live Voicemail",
+          "description": ""
+        },
+        {
+          "name": "Name Drop",
+          "description": ""
+        },
+        {
+          "name": "Standby Mode",
+          "description": "Turn your iPhone on its side while charging to make it even more useful when you set it down."
+        }
+      ]
+    },
+    {
+      "name": "iOS 17",
+      "description": "",
+      "features:": [
+        {
+          "name": "Live Voicemail",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "userReviews": [
+    {
+      "id": 1,
+      "userId": 2,
+      "deviceId": 1,
+      "rating": 4,
+      "review": "<p>This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option.</p>"
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "deviceId": 1,
+      "rating": 2,
+      "review": "<p>This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option.</p>"
+    }
+  ],
+  "userFavorites": [
+    {
+      "id": 1,
+      "userId": 2,
+      "deviceId": 1
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "deviceId": 2
+    }
+  ]
 }

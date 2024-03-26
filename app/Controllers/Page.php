@@ -8,14 +8,15 @@ class Page extends Controller {
      */
     public function getRoutes(): array
     {
-        // TODO Auto-generated method stub
         return [
             'home' => [$this, 'index'], 
             'devices' => [$this, 'devices'],
             'ranking' => [$this, 'ranking'],
-            'devices/(\d+)' => [$this, 'singleDevice'],
+            'login' => [$this, "login"],
+            'register' => [$this, "register"],
             'notFound' => [$this, 'notFound'], 
-            'serverError' => [$this, 'serverError']
+            'serverError' => [$this, 'serverError'],
+            'devices/(\d+)' => [$this, 'singleDevice'],
         ];
     }
     
@@ -41,5 +42,13 @@ class Page extends Controller {
     
     public function serverError($params) {
         $this->view("ServerError", "Default");
+    }
+
+    public function register($params) {
+        $this->view("Register", "Default");
+    }
+
+    public function login($params) {
+        $this->view("Login", "Default");
     }
 }

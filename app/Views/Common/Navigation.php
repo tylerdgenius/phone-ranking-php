@@ -1,4 +1,11 @@
 <?php 
+
+$username = "";
+
+if(isset($_SESSION['username'])) {
+$username = $_SESSION['username'];
+}
+
     $links = [
         "Home" => "home",
 		"Ranking" => "ranking",
@@ -9,6 +16,8 @@
         "Login" => "login",
         "Join the community" => "register"
     ];
+
+
 ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav-container">
         <div class="container-fluid justify-content-center">
@@ -24,19 +33,35 @@
                 	
             	</ul>
             	<div class="d-flex">
-            		<?php foreach ($buttons as $key => $value) { 
+					
+            		<?php 
+					
+					if(!$username) {
+						foreach ($buttons as $key => $value) { 
             			    $class = '';
             			    
             			    if($key == "Login") {
-            			        $class = "btn-outline me-2";
+            			        $class = "btn-outline-danger me-2";
             			    } else {
-            			        $class = "btn-primary";
+            			        $class = "btn-danger";
             			    }
             			    
-                    	    echo "<a href='$value'><button type='button' class='$class btn'>
+                    	    echo "<a href='$value'><button type='button' class='$class btn btn'>
                                 $key
                             </button></a>";
-                        }; ?>
+                        };
+					} else {
+						echo "<a class='d-flex align-items-center gap-2 border border-black px-2 py-2 rounded-2 border-opacity-10'>
+						<p class='mb-0'>
+						$username
+						</p>
+						<i class='material-icons'>account_circle</i>
+						</a>";
+					}
+					
+					
+						
+					?>
             	</div>
         	</div>
         </div>
