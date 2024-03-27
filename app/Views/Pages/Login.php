@@ -42,12 +42,12 @@ if(isset($_SESSION['email'])) {
         <form class="mt-5" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" >
             <label for='email'>Email Address</label>
             <div class="mt-1"></div>
-            <input name='email' type='text' class="w-100 border-0 py-2 px-3 bg bg-light rounded-2" placeholder="Enter your email" autofocus />
+            <input id='emailInput' name='email' type='text' class="w-100 border-0 py-2 px-3 bg bg-light rounded-2" placeholder="Enter your email" autofocus />
             <?php
             if(isset($errors)) {
                 foreach($errors as $error) {
                     if($error['type'] == 'email' || $error['type'] == 'both') {
-                    echo "<div class='bg bg-danger rounded-2 bg-opacity-50 mt-2 p-2 text-white '>{$error['error']}</div>";
+                    echo "<div id='emailError' class='bg bg-danger rounded-2 bg-opacity-50 mt-2 p-2 text-white '>{$error['error']}</div>";
                     }
                 }
             }
@@ -58,7 +58,7 @@ if(isset($_SESSION['email'])) {
             <label for='password'>Password</label>
             <div class="mt-1"></div>
             <div class="d-flex align-items-center w-100 py-2 rounded-2 bg bg-light px-3 gap-3">
-                <input type='password' name='password' class="flex-fill  border-0 bg-transparent" placeholder="*******" />
+                <input type='password' name='password' id="passwordInput" class="flex-fill  border-0 bg-transparent" placeholder="*******" />
                 <i class="material-icons cursor-pointer" id='password-visibility'>
                     visibility
                 </i>
@@ -68,7 +68,7 @@ if(isset($_SESSION['email'])) {
             if(isset($errors)) {
                 foreach($errors as $error) {
                     if($error['type'] == 'password' || $error['type'] == 'both') {
-                    echo "<div class='bg bg-danger rounded-2 bg-opacity-50 mt-2 p-2 text-white '>{$error['error']}</div>";
+                    echo "<div id='passwordError' class='bg bg-danger rounded-2 bg-opacity-50 mt-2 p-2 text-white '>{$error['error']}</div>";
                     }
                 }
             }

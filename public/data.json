@@ -61,19 +61,19 @@
         {
           "id": 1,
           "name": "Allo Allo",
-          "price": "",
+          "price": 575.2,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 2,
           "name": "Allo Allo",
-          "price": "",
+          "price": 900.2,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 3,
           "name": "Allo Allo",
-          "price": "",
+          "price": 922.2,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         }
       ]
@@ -130,19 +130,19 @@
         {
           "id": 1,
           "name": "Allo Allo",
-          "price": "",
+          "price": 199.1,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 2,
           "name": "Allo Allo",
-          "price": "",
+          "price": 1000.1,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 3,
           "name": "Allo Allo",
-          "price": "",
+          "price": 28.8,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         }
       ]
@@ -199,25 +199,24 @@
         {
           "id": 1,
           "name": "Allo Allo",
-          "price": "",
+          "price": 234.2,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 2,
           "name": "Allo Allo",
-          "price": "",
+          "price": 23.6,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         },
         {
           "id": 3,
           "name": "Allo Allo",
-          "price": "",
+          "price": 689.4,
           "link": "https://www.alloallo.com/qa/refurbished-iphone/iphone-x/"
         }
       ]
     }
   ],
-  "rankings": [{}],
   "operatingSystems": [
     {
       "name": "iOS 17",
@@ -251,28 +250,21 @@
   "userReviews": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "deviceId": 1,
       "rating": 4,
-      "review": "<p>This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option.</p>"
-    },
-    {
-      "id": 1,
-      "userId": 2,
-      "deviceId": 1,
-      "rating": 2,
-      "review": "<p>This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option.</p>"
+      "review": "This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option."
     }
   ],
   "userFavorites": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "deviceId": 1
     },
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "deviceId": 2
     }
   ]

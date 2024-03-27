@@ -14,6 +14,7 @@ class Page extends Controller {
             'ranking' => [$this, 'ranking'],
             'login' => [$this, "login"],
             'register' => [$this, "register"],
+            'logout' => [$this, "logout"],
             'notFound' => [$this, 'notFound'], 
             'serverError' => [$this, 'serverError'],
             'devices/(\d+)' => [$this, 'singleDevice'],
@@ -50,5 +51,9 @@ class Page extends Controller {
 
     public function login($params) {
         $this->view("Login", "Default");
+    }
+
+    public function logout($params) {
+        $this->view("Logout", "Default");
     }
 }

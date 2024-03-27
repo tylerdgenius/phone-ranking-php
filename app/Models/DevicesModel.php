@@ -64,7 +64,33 @@ class DevicesModel extends Database {
     }
     
     public function getSingleDevice($deviceId) {
-        return $this->connect()->filterById("devices", $deviceId)[0];
+
+      $device = null;
+
+      if(!isset($deviceId) || $deviceId == "") {
+        return $device;
+      }
+
+      $device = $this->connect()->filterById("devices", $deviceId)[0];
+
+      if(!isset($device) || empty($device)) {
+        return $device;
+      }
+
+      $userReviewRatings = $this->userReviewModel->findRatingsByDeviceId($deviceId);
+
+      if(isset($userReviewRatings) && !empty($userReviewRatings)) {
+        $device['userReviews'] = $userReviewRatings;
+        $ratingData = $this->getRatingData($userReviewRatings);
+        $device['averageUserRating'] = $ratingData['averageUserRating'];
+        $device['totalRatingCount'] = $ratingData['totalRatingCount'];
+      } else {
+        $device['userReviews'] = [];
+        $device['averageUserRating'] = 0;
+        $device['totalRatingCount'] = 0;
+      }
+
+      return $device;
     }
 
     public function sortDevicesByName() {

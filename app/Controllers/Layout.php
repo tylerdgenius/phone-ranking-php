@@ -9,7 +9,7 @@ class Layout {
         
         $urlData = $data;
 
-        $mainContent = self::getMainContent($title);
+        $mainContent = self::getMainContent($title, $urlData);
     
         $navigationContent = self::getNavigationContent($title);
 
@@ -46,7 +46,7 @@ class Layout {
         return ob_get_clean();
     }
 
-    public static function getMainContent($title) {
+    public static function getMainContent($title, $urlData) {
         ob_start();
         include CLIENT_PAGES . $title . '.php';
         return ob_get_clean();

@@ -51,12 +51,17 @@ $username = $_SESSION['username'];
                             </button></a>";
                         };
 					} else {
-						echo "<a class='d-flex align-items-center gap-2 border border-black px-2 py-2 rounded-2 border-opacity-10'>
-						<p class='mb-0'>
-						$username
-						</p>
-						<i class='material-icons'>account_circle</i>
-						</a>";
+						echo "<div class='d-flex gap-5 align-items-center '>
+							<div class='d-flex align-items-center gap-2 border border-black px-2 py-2 rounded-2 border-opacity-10'>
+							<p class='mb-0'>
+							$username
+							</p>
+							<i class='material-icons'>account_circle</i>
+							</div>
+							<a href='logout' class='text-danger'>
+							<i class='material-icons'>logout</i>
+							</a>
+						</div>";
 					}
 					
 					
