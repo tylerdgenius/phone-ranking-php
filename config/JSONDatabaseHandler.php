@@ -59,6 +59,28 @@ class JSONDatabaseHandler {
         }
         return false;
     }
+
+    public function deleteById($collection, $id) {
+        $data = $this->read();
+
+        if($data[$collection]) {
+            $collectionData = $data[$collection];
+
+            $finalCollection = [];
+
+            foreach($collectionData as $collectionDatum) {
+                if($collectionDatum['id'] !== $id) {
+                    $finalCollection[] = $id;
+                }
+            }
+
+            $this->write($data);
+            return true;
+        }
+
+        return false;
+        
+    }
     
     public function delete($collection, $index) {
         $data = $this->read();

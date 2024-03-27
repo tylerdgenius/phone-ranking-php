@@ -23,7 +23,6 @@ if(isset($_SESSION['email'])) {
 
 
         if(isset($loginData) && $loginData['status'] == true) {
-            var_dump($loginData);
             $_SESSION['email'] = $loginData['payload']['email'];
             $_SESSION['id'] = $loginData['payload']['id'];
             $_SESSION['username'] = $loginData['payload']['username'];
@@ -37,7 +36,8 @@ if(isset($_SESSION['email'])) {
 
 <main class="container-fluid row vh-100">
     <div class="col-lg-6 col-12 p-5 bg-white">
-        <h1 class="text-danger">Welcome back!</h1>
+        <a class="fs-1 text-decoration-none text-danger" href='home'>Phone Recommendation</a>
+        <h3 class="text-danger mt-5 text-black opacity-50">Welcome back!</h3>
         <p>You can log into your account using the form below</p>
         <form class="mt-5" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" >
             <label for='email'>Email Address</label>
@@ -78,6 +78,10 @@ if(isset($_SESSION['email'])) {
             <div class="mt-4"></div>
             <button type='submit' class="btn btn-danger">Login</button>
         </form>
+        <p class="mt-5">
+            Don't have an account? <a href="register" class="text-danger text-decoration-none ">Register now!</a>
+        </p>
+        
     </div>
     <div class="col-lg-6 p-5 bg-white d-lg-flex d-none justify-content-center align-items-center">
         <div class="bg-light rounded-2 w-100 h-100">

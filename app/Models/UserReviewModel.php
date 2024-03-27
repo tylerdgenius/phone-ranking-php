@@ -10,6 +10,22 @@ class UserReviewModel extends Database {
         $this->userModel = new UserModel();
     }
 
+    public function getAllUserReviews() {
+        return $this->connect()->readAll("userReviews");
+    }
+
+    public function getLastUserId() {
+      $userFavorites = $this->getAllUserReviews();
+
+      $lastFavorite = end($userFavorites);
+
+      if(!isset($lastFavorite)) {
+        return 1;
+      } else {
+        return $lastFavorite['id'];
+      }
+    }
+
     public function findRatingsByDeviceId($deviceId) {
 
         $users = $this->userModel->getAllUsers();

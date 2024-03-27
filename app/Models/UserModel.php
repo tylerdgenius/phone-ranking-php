@@ -1,13 +1,6 @@
 <?php
 
 class UserModel extends Database {
-    public int $lastUserId;
-
-    public function __construct()
-    {
-      $this->getLastUserId();
-    }
-
     public function getAllUsers() {
       return $this->connect()->readAll("users");
     }
@@ -18,11 +11,9 @@ class UserModel extends Database {
      $singleUser = null;
 
      foreach($users as $user) {
-        if(!isset($user['email']) || $user['email'] != $email) {
-          $singleUser = null;
+        if(isset($user['email']) && $user['email'] == $email) {
+          $singleUser = $user;
         }
-
-        $singleUser = $user;
      }
 
      return $singleUser;
@@ -34,9 +25,9 @@ class UserModel extends Database {
       $lastUser = end($users);
 
       if(!isset($lastUser)) {
-        $this->lastUserId = 1;
+        return 1;
       } else {
-        $this->lastUserId = $lastUser['id'];
+        return $lastUser['id'];
       }
     }
 
@@ -48,47 +39,96 @@ class UserModel extends Database {
       ];
 
       try {
-        if(!$email) {
-          throw new Error("Email is required");
+        if(!isset($email) || $email == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "email",
+            "error" => "Email is required"
+          ];
+          
+          return $data;
         }
 
-        if(!$username) {
-          throw new Error("Username is required");
+        if(!isset($username) || $username == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "username",
+            "error" => "Username is required"
+          ];
+          
+          return $data;
         }
 
-        if(!$password) {
-          throw new Error("Password is required");
+        if(!isset($password) || $password == "") {
+          $data['message'] = "The given data is invalid";
+
+          $data['payload'][] = [
+            "type" => "password",
+            "error" => "Password is required"
+          ];
+
+          return $data;
         }
 
         $sanitizedEmail = htmlspecialchars($email);
 
         if(!filter_var($sanitizedEmail, FILTER_VALIDATE_EMAIL)) {
-          throw new Error("Email is invalid");
+          $data['message'] = "The given data is invalid";
+
+          $data['payload'][] = [
+            "type" => "email",
+            "error" => "Email is invalid"
+          ];
+
+          return $data;
         }
 
         $sanitizedPassword = htmlspecialchars($password);
 
         if(!preg_match("/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-])/", $sanitizedPassword)) {
-          throw new Error("Password must be 8 characters 
+          $data['message'] = "The given data is invalid";
+
+          $data['payload'][] = [
+            "type" => "password",
+            "error" => "Password must be 8 characters 
           long and have 1 uppercase letter, 1 lowercase 
-          letter, 1 symbol and 1 number");
+          letter, 1 symbol and 1 number"
+          ];
+          
+          return $data;
         }
 
         $sanitizedUsername = htmlspecialchars($username);
 
 
         if(!preg_match("/^[a-zA-Z0-9]+$/", $sanitizedUsername)) {
-          throw new Error("Username can only be strings and numbers");
+          $data['message'] = "The given data is invalid";
+
+          $data['payload'][] = [
+            "type" => "username",
+            "error" => "Username can only be strings and numbers"
+          ];
+          
+          return $data;
         }
 
         $user = $this->findUserByEmail($sanitizedEmail);
 
         if(isset($user)) {
-          throw new Error("User account already exists");
+          $data['message'] = "The given data is invalid";
+
+          $data['payload'][] = [
+            "type" => "both",
+            "error" => "User account already exists"
+          ];
+
+          return $data;
         }
 
         $savedUser = $this->connect()->create("users", [
-          "id"=> $this->lastUserId,
+          "id"=> $this->getLastUserId() + 1,
           "email" => $sanitizedEmail,
           "username" => $sanitizedUsername,
           "password" => $sanitizedPassword

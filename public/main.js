@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const passwordVisibility = document.getElementById("password-visibility");
+  const passwordNode = document.getElementById("passwordInput");
 
   passwordVisibility.addEventListener("click", () => {
-    if (passwordVisibility.innerHTML === "visibility") {
-      passwordVisibility.innerHTML = "visibility_off";
-    } else {
+    if (passwordVisibility.innerHTML == "visibility_off") {
       passwordVisibility.innerHTML = "visibility";
+    } else {
+      passwordVisibility.innerHTML = "visibility_off";
+    }
+
+    if (passwordNode.getAttribute("type") === "password") {
+      passwordNode.setAttribute("type", "text");
+    } else {
+      passwordNode.setAttribute("type", "password");
     }
   });
 
@@ -32,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const passwordNode = document.getElementById("passwordInput");
   const passwordErrorNode = document.getElementById("passwordError");
 
   passwordNode.addEventListener("change", (e) => {

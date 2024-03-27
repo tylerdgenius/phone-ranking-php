@@ -12,24 +12,18 @@ if(isset($_SESSION['email'])) {
 
     require_once MODELS . "UserModel.php";
 
-    if(isset($_POST) && isset($_POST['email']) && isset($_POST['password'])) {
+    if(isset($_POST) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username'])) {
         $userModel = new UserModel();
 
-        $loginData = $userModel->loginUser($_POST['email'], $_POST['password']);
+        $registerData = $userModel->createUser($_POST['email'], $_POST['username'], $_POST['password']);
 
-        if(isset($loginData) && !$loginData['status']) {
-            $errors = $loginData['payload'];
+        if(isset($registerData) && !$registerData['status']) {
+            $errors = $registerData['payload'];
         }
 
 
-        if(isset($loginData) && $loginData['status'] == true) {
-            var_dump($loginData);
-            $_SESSION['email'] = $loginData['payload']['email'];
-            $_SESSION['id'] = $loginData['payload']['id'];
-            $_SESSION['username'] = $loginData['payload']['username'];
-            $_SESSION['token'] = $loginData['payload']['token'];
-
-            header("Location: home");
+        if(isset($registerData) && $registerData['status'] == true) {
+            // header("Location: login");
         }
     }
 
@@ -37,7 +31,8 @@ if(isset($_SESSION['email'])) {
 
 <main class="container-fluid row vh-100">
     <div class="col-lg-6 col-12 p-5 bg-white">
-        <h1 class="text-danger">Welcome</h1>
+        <a class="fs-1 text-decoration-none text-danger" href='home'>Phone Recommendation</a>
+        <h3  class="text-danger mt-5 text-black opacity-50">Welcome</h3>
         <p>You can signup using the form below</p>
         <form class="mt-5" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" >
             <label for='email'>Email Address</label>
@@ -87,6 +82,9 @@ if(isset($_SESSION['email'])) {
 
             <button type='submit' class="btn btn-danger mt-3">Login</button>
         </form>
+        <p class="mt-5">
+            Got an account? <a href="login" class="text-danger text-decoration-none ">Login now!</a>
+        </p>
     </div>
     <div class="col-lg-6 p-5 bg-white d-lg-flex d-none justify-content-center align-items-center">
         <div class="bg-light rounded-2 w-100 h-100">
