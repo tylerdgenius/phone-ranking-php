@@ -200,7 +200,7 @@ if(isset($_POST) && isset($_POST['review']) && isset($_POST['rating']) && isset(
             <h5 class="mt-3 text-dark opacity-50 ">Past reviews</h5>
             <div class="mt-3">
                 <?php
-                    if(!isset($singleDevice['userReviews']) || empty($singleDevice)) {
+                    if(!isset($singleDevice['userReviews']) || empty($singleDevice['userReviews'])) {
                         echo "<p>There are currently no reviews for this device</p>";
                     }
                     

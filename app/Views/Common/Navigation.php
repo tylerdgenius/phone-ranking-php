@@ -6,18 +6,29 @@ if(isset($_SESSION['username'])) {
 	$username = $_SESSION['username'];
 }
 
-    $links = [
-        "Home" => "home",
-		"Ranking" => "ranking",
-        "Operating Systems" => "operating-system"
-    ];
+    $links = [];
     
     $buttons = [
         "Login" => "login",
         "Join the community" => "register"
     ];
 
+	$currentPath = $_SERVER['REQUEST_URI'];
+	$pattern = '/devices\/\d+/';
 
+	if(preg_match($pattern, $currentPath)) {
+		$links = [
+			"Home" => "../home",
+			"Ranking" => "../ranking",
+			"Operating Systems" => "../operating-system"
+    	];
+	} else {
+		$links = [
+			"Home" => "home",
+			"Ranking" => "ranking",
+			"Operating Systems" => "operating-system"
+    	];
+	}
 ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav-container">
         <div class="container-fluid justify-content-center">
