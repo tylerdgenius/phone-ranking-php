@@ -10,6 +10,8 @@ if(isset($_SESSION['email'])) {
 
     $errors = [];
 
+    $success = null;
+
     require_once MODELS . "UserModel.php";
 
     if(isset($_POST) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username'])) {
@@ -24,6 +26,15 @@ if(isset($_SESSION['email'])) {
 
         if(isset($registerData) && $registerData['status'] == true) {
             // header("Location: login");
+            $success = true;
+
+            unset($_POST['email']);
+            unset($_POST['username']);
+            unset($_POST['password']);
+            unset($_POST);
+
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit();
         }
     }
 
@@ -34,6 +45,14 @@ if(isset($_SESSION['email'])) {
         <a class="fs-1 text-decoration-none text-danger" href='home'>Phone Recommendation</a>
         <h3  class="text-danger mt-5 text-black opacity-50">Welcome</h3>
         <p>You can signup using the form below</p>
+                    <?php
+            
+            if(isset($success)) {
+                echo "<p class='bg-success text-white px-2 py-2 mt-3 rounded-2'>Successfully registered user account. Redirecting to login...</p>";
+            }
+
+            ?>
+
         <form class="mt-5" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" >
             <label for='email'>Email Address</label>
             <div class="mt-1"></div>
@@ -80,7 +99,8 @@ if(isset($_SESSION['email'])) {
             
             ?>
 
-            <button type='submit' class="btn btn-danger mt-3">Login</button>
+            
+            <button type='submit' class="btn btn-danger mt-3">Register</button>
         </form>
         <p class="mt-5">
             Got an account? <a href="login" class="text-danger text-decoration-none ">Login now!</a>

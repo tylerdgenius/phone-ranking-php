@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "tylerdgenius",
-      "email": "albertnwachuwu@gmail.com",
+      "email": "albertnwachukwu@gmail.com",
       "password": "Naruto60$"
     }
   ],
@@ -237,12 +237,13 @@
     }
   ],
   "userReviews": [
+    { "id": 1, "userId": 1, "deviceId": 2, "rating": "3", "review": "Yo" },
     {
-      "id": 1,
+      "id": 2,
       "userId": 1,
-      "deviceId": 1,
-      "rating": 4,
-      "review": "This product is fantastic! It exceeded all my expectations. The build quality is excellent, and it feels very sturdy in hand. The performance is top-notch, and it handles everything I throw at it effortlessly. The camera takes stunning photos and videos, especially in low-light conditions. The battery life is impressive, lasting me throughout the day with moderate usage. Overall, I highly recommend this product to anyone looking for a reliable and high-quality option."
+      "deviceId": 2,
+      "rating": "3",
+      "review": "Testing this"
     }
   ],
   "userFavorites": [

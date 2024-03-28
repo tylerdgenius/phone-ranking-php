@@ -3,11 +3,8 @@
 require_once MODELS . 'UserModel.php';
 
 class UserReviewModel extends Database {
-    private UserModel $userModel;
-
     public function __construct()
     {
-        $this->userModel = new UserModel();
     }
 
     public function getAllUserReviews() {
@@ -15,9 +12,9 @@ class UserReviewModel extends Database {
     }
 
     public function getLastUserId() {
-      $userFavorites = $this->getAllUserReviews();
+      $userReviews = $this->getAllUserReviews();
 
-      $lastFavorite = end($userFavorites);
+      $lastFavorite = end($userReviews);
 
       if(!isset($lastFavorite)) {
         return 1;
@@ -28,7 +25,11 @@ class UserReviewModel extends Database {
 
     public function findRatingsByDeviceId($deviceId) {
 
-        $users = $this->userModel->getAllUsers();
+        require_once MODELS . 'UserModel.php';
+
+        $userModel = new UserModel();
+
+        $users = $userModel->getAllUsers();
 
        $userReviews = [];
 
@@ -55,6 +56,68 @@ class UserReviewModel extends Database {
     }
 
     public function createReview($userId, $deviceId, $review, $rating) {
+        $data = [
+            "status" => false,
+            "message" => "",
+            "payload" => []
+        ];
 
+        if(!isset($userId) || $userId == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "both",
+            "error" => "An unknown error has occured while creating review"
+          ];
+          
+          return $data;
+        }
+
+        if(!isset($deviceId) || $deviceId == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "both",
+            "error" => "An unknown error has occured while creating review"
+          ];
+          
+          return $data;
+        }
+
+        if(!isset($review) || $review == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "review",
+            "error" => "A review is required"
+          ];
+          
+          return $data;
+        }
+
+        if(!isset($rating) || $rating == "") {
+          $data["message"] = "The given data is required";
+          
+          $data['payload'][] = [
+            "type" => "rating",
+            "error" => "A rating is required"
+          ];
+          
+          return $data;
+        }
+
+        $savedReview = $this->connect()->create("userReviews", [
+          "id"=> $this->getLastUserId() + 1,
+          "userId" => $userId,
+          "deviceId" => $deviceId,
+          "rating" => $rating,
+          "review" => $review
+        ]);
+
+        $data['status'] = true;
+        $data['message'] = "Successfully created user";
+        $data['payload'] = $savedReview;
+
+        return $data;
     }
 }

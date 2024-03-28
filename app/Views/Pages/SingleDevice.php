@@ -3,6 +3,7 @@
 session_start();
 
 require_once MODELS . 'DevicesModel.php';
+require_once MODELS . 'UserReviewModel.php';
 
 $deviceModel = new DevicesModel();
 
@@ -26,6 +27,39 @@ if($singleDevice) {
     $fields['Battery (Uptime)'] = $singleDevice['batteryType'];
     $fields['Dimensions'] = $singleDevice['dimensions'];
 }
+
+/**
+ * Submitting review data
+ */
+
+$errors = [];
+
+$success = null;
+
+if(isset($_POST) && isset($_POST['review']) && isset($_POST['rating']) && isset($_SESSION['id'])) {
+
+    $userReviewModel = new UserReviewModel();
+
+    $reviewData = $userReviewModel->createReview($_SESSION['id'], 
+    $singleDevice['id'], $_POST['review'], $_POST['rating']);
+
+    if(isset($reviewData) && !$reviewData['status']) {
+       $errors = $reviewData['payload'];
+    }
+
+
+    if(isset($reviewData) && $reviewData['status'] == true) {
+        // header("Location: login");
+        $success = true;
+        unset($_POST['review']);
+        unset($_POST['rating']);
+        unset($_POST);
+
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit();
+    }
+}
+
 
 ?>
 
@@ -127,11 +161,10 @@ if($singleDevice) {
                 <label for="review">What do you like or hate about this device?</label>
                 <br>
                 <div style="height:140px;"> 
-                    <textarea style="outline: none; resize: none;" 
-                    class="w-100 border-1 border-opacity-10 px-3 py-3 h-100 rounded-2"
-                    name='review'
-                    placeholder="Type a review for this device" required>
-                    </textarea>
+                    <textarea style="outline: none; resize: none;"
+                        class="w-100 border-1 border-opacity-10 px-3 py-3 h-100 rounded-2"
+                        name='review'
+                        placeholder="Type a review for this device" required></textarea>
                 </div>
                 <div class="mt-3">
                     <label for='rating'>What rating would it give it?</label>

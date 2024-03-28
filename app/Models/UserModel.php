@@ -194,6 +194,8 @@ class UserModel extends Database {
             ];
             return $data;
           }
+
+        var_dump($sanitizedEmail);
           
         $user = $this->findUserByEmail($sanitizedEmail);
 

@@ -1,14 +1,8 @@
 <?php
 
-require_once MODELS . 'UserReviewModel.php';
+require_once MODELS . 'UserFavModel.php';
 
 class DevicesModel extends Database {
-    private UserReviewModel $userReviewModel;
-
-    public function __construct() {
-      $this->userReviewModel = new UserReviewModel();
-    }
-
     public function getAllDevices() {
       $devices = $this->connect()->readAll("devices");
 
@@ -16,7 +10,11 @@ class DevicesModel extends Database {
 
       foreach ($devices as $device) {
           if(isset($device['id'])) {
-            $userReviewRatings = $this->userReviewModel->findRatingsByDeviceId($device['id']);
+            require_once MODELS . "UserReviewModel.php";
+
+            $userReviewModel = new UserReviewModel();
+
+            $userReviewRatings = $userReviewModel->findRatingsByDeviceId($device['id']);
 
             if(isset($userReviewRatings) && count($userReviewRatings) != 0) {
               $device['userReviews'] = $userReviewRatings;
@@ -77,7 +75,11 @@ class DevicesModel extends Database {
         return $device;
       }
 
-      $userReviewRatings = $this->userReviewModel->findRatingsByDeviceId($deviceId);
+      require_once MODELS . 'UserReviewModel.php';
+
+      $userReviewModel = new UserReviewModel();
+
+      $userReviewRatings = $userReviewModel->findRatingsByDeviceId($deviceId);
 
       if(isset($userReviewRatings) && !empty($userReviewRatings)) {
         $device['userReviews'] = $userReviewRatings;
