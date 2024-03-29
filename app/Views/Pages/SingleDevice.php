@@ -121,11 +121,11 @@ if(isset($_POST) && isset($_POST['review']) && isset($_POST['rating']) && isset(
                 <div class="d-flex flex-wrap gap-4">
                     <div class="mt-5">
                         <p class="mb-0">Total no of user ratings</p>
-                        <p><?php echo $singleDevice['totalRatingCount']?></p>
+                        <p><?php echo $singleDevice['totalRatingCount'] ?></p>
                     </div>
                     <div class="mt-5">
                         <p class="mb-0">Average user rating score</p>
-                        <p><?php echo $singleDevice['averageUserRating']?></p>
+                        <p><?php echo $singleDevice['averageUserRating'] ?></p>
                     </div>
                 </div>
                 <a href="#userReviews" class="text-decoration-none text-danger">View Reviews

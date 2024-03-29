@@ -19,8 +19,8 @@ class DevicesModel extends Database {
             if(isset($userReviewRatings) && count($userReviewRatings) != 0) {
               $device['userReviews'] = $userReviewRatings;
               $ratingData = $this->getRatingData($userReviewRatings);
-              $device['averageUserRating'] = $ratingData['averageUserRating'];
-              $device['totalRatingCount'] = $ratingData['totalRatingCount'];
+              $device['averageUserRating'] = ceil($ratingData['averageUserRating']);
+              $device['totalRatingCount'] = ceil($ratingData['totalRatingCount']);
             } else {
               $device['userReviews'] = [];
               $device['averageUserRating'] = 0;
@@ -32,6 +32,8 @@ class DevicesModel extends Database {
             $finalDevices[] = $device;
           }
       }
+
+      usort($finalDevices, [$this, 'compareIdsDescending']);
 
       return $finalDevices;
     }
@@ -84,8 +86,8 @@ class DevicesModel extends Database {
       if(isset($userReviewRatings) && !empty($userReviewRatings)) {
         $device['userReviews'] = $userReviewRatings;
         $ratingData = $this->getRatingData($userReviewRatings);
-        $device['averageUserRating'] = $ratingData['averageUserRating'];
-        $device['totalRatingCount'] = $ratingData['totalRatingCount'];
+        $device['averageUserRating'] = ceil($ratingData['averageUserRating']);
+        $device['totalRatingCount'] = ceil($ratingData['totalRatingCount']);
       } else {
         $device['userReviews'] = [];
         $device['averageUserRating'] = 0;

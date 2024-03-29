@@ -3,10 +3,6 @@
 require_once MODELS . 'UserModel.php';
 
 class UserReviewModel extends Database {
-    public function __construct()
-    {
-    }
-
     public function getAllUserReviews() {
         return $this->connect()->readAll("userReviews");
     }
@@ -25,34 +21,35 @@ class UserReviewModel extends Database {
 
     public function findRatingsByDeviceId($deviceId) {
 
-        require_once MODELS . 'UserModel.php';
+      require_once MODELS . 'UserModel.php';
 
-        $userModel = new UserModel();
+      $userModel = new UserModel();
 
-        $users = $userModel->getAllUsers();
+      $users = $userModel->getAllUsers();
 
-       $userReviews = [];
+      $userReviews = [];
 
-       $filteredReviews = $this->connect()->readAll("userReviews");
+      $filteredReviews = $this->connect()->readAll("userReviews");
 
-       if($filteredReviews) {
-            foreach ($filteredReviews as $filteredReview) {
-                if(isset($filteredReview) && $filteredReview['deviceId'] == $deviceId) {
-                    foreach($users as $user) {
-                    if($user['id'] == $filteredReview['userId']) {
-                        $filteredReview['username'] = $user['username'];
-                    } else {
-                        $filteredReview['username'] = "";
-                    }
-                }
-                    $userReviews[] = $filteredReview;
-                }
-
-                
+      if($filteredReviews) {
+        foreach ($filteredReviews as $filteredReview) {
+          if(isset($filteredReview) && $filteredReview['deviceId'] == $deviceId) {
+            foreach($users as $user) {
+              if($user['id'] == $filteredReview['userId']) {
+                $filteredReview['username'] = $user['username'];
+              } else {
+                $filteredReview['username'] = "";
+              }
             }
-       }
 
-       return $userReviews;
+            $userReviews[] = $filteredReview;
+          }
+        }
+      }
+
+      usort($userReviews, [$this, 'compareIdsDescending']);
+
+      return $userReviews;
     }
 
     public function createReview($userId, $deviceId, $review, $rating) {
