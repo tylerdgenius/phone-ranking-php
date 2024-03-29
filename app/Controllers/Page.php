@@ -12,6 +12,7 @@ class Page extends Controller {
             'home' => [$this, 'index'], 
             'devices' => [$this, 'devices'],
             'ranking' => [$this, 'ranking'],
+            'operating-system' => [$this, 'operatingSystem'],
             'login' => [$this, "login"],
             'register' => [$this, "register"],
             'logout' => [$this, "logout"],
@@ -55,5 +56,9 @@ class Page extends Controller {
 
     public function logout($params) {
         $this->view("Logout", "Default");
+    }
+
+    public function operatingSystem($params){
+        $this->view("OperatingSystem", "Default");
     }
 }
